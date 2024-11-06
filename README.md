@@ -1,8 +1,23 @@
-# React + Vite
+🛍️ E-commerce Demo App
+Una aplicación de e-commerce construida con React, Firebase y MongoDB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+📜 Descripción
+Este proyecto es una aplicación de e-commerce de muestra, diseñada para explorar la integración del frontend con un backend en Firebase y Node.js, y una base de datos en MongoDB. La app incluye funcionalidades de:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+• Carrito de compras
+• Gestión de productos favoritos
+• Filtrado de productos por categorías
+• Logueo mediante cuentas de Google
+
+
+🚀 Características
+• Frontend: Desarrollado en React y Vite para una experiencia de usuario dinámica y modular.
+• Backend: API REST con Node.js, implementada en Firebase Functions.
+• Base de Datos: MongoDB para almacenar y organizar los productos.
+• Login: Integración de autenticación de Google para un acceso rápido y seguro.
+• Favoritos: Permite marcar productos favoritos y acceder a ellos fácilmente.
+
+
+🌐 Demo en Producción
+[Acceder a la demo en Firebase](https://ecommerce-muestra.firebaseapp.com/)
