@@ -1,0 +1,160 @@
+.filter-container{
+    background-color: #fafafa;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-option {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline;
+    font-size: 14px;
+}
+
+.filter-option.selected {
+    border-bottom: 2px solid #000; /* Ajusta el color y el grosor según lo que necesites */
+}
+
+
+/* *****************************************
+*                                          *
+*    CLASES PARA LAS CARDS DE PRODUCTOS    *
+*                                          *
+***************************************** */
+
+.product-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card{
+    width: 100%;
+    flex-basis: auto;
+    background-color: #fff;
+    text-align: center;
+    color: #252525;
+    border: 1px solid rgb(228, 228, 228);
+    margin-bottom: 20px;
+}
+
+.product-fav-btn{
+    float: right;
+    margin: 15px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 10; 
+}
+
+
+.product-card-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+
+.card-img-container{
+    width: 600px;
+    height: auto;
+    margin: auto;
+}
+
+.product-card-img{
+    max-height: 300px; 
+    width: auto; 
+    margin: auto;
+}
+
+
+.product-card-info{
+    padding: 40px 40px 0 40px;
+    text-align: left;
+}
+
+.product-card-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.product-card-description{
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.product-card-price{
+    font-size: 26px;
+    color: #252525;
+}
+
+.product-card-talles p{
+    font-size: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los cuadros */
+.size-option {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.size-option input {
+    display: none; /* Esconde el radio por defecto */
+}
+
+.size-option span {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    color: #000;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cambios cuando el radio está seleccionado */
+.size-option input:checked + span {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+.addToCart-btn{
+    padding: 4px 10px;
+    border: none;
+    padding: 20px 80px;
+    float: right;
+    background-color: #252525;  
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    transition: 300ms;
+}
+
+.addToCart-btn:hover{
+    background-color: #585858;  
+}
+
+.btn-div{
+    position: relative;
+}
+
+.alerta-talle{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 13px;
+    color: #cc6161;
+}

@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    background-color: #fafafa;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+
+.header {
+    padding: 2rem 0;
+    background-color: #fafafa; /* Color de fondo */
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px; /* Ajusta según el tamaño de tu logo */
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between; /* Centra el navbar horizontalmente */
+    background-color: transparent; /* Color de fondo */
+    padding: 1rem 1rem 0 1rem;
+    gap: 120px;
+}
+
+.nav-header ul {
+    display: flex; /* Aplica flexbox a la lista */
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-header ul li a {
+    color: #000000; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 15px;
+    margin: 0 20px;
+    position: relative; /* Necesario para el efecto */
+}
+
+.nav-header ul li a::after {
+    content: ""; /* Crea un pseudo-elemento vacío */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Comienza con ancho 0 para la transición */
+    height: 3px; /* Altura de la línea */
+    background-color: #e63a3a; /* Color de la línea */
+    transition: width 0.3s ease; /* Duración y estilo de la transición */
+}
+
+.nav-header ul li a:hover {
+    color: #000000;
+}
+
+.nav-header ul li a:hover::after {
+    width: 100%; /* La línea se expande al 100% al hacer hover */
+    /* box-shadow: 1px 3px 5px 0px #1b1b1bb2;
+    -webkit-box-shadow: 1px 3px 5px 0px #1b1b1bb2;
+    -moz-box-shadow: 1px 3px 5px 0px #1b1b1bb2; */
+}
+
+.cart-btn {
+    position: relative;
+}
+
+.cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 10px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    padding: 1px 0 0 1px;
+    background-color: #e63a3a;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    z-index: 10; /* Asegura que la lista esté encima de otros elementos */
+}
+
+.banner {
+    width: 100%;
+}
+
+/* Favoritos */
+.fav-container {
+    position: relative;
+}
+
+.favBtn {
+    cursor: pointer;
+}
+
+.fav-list-container {
+    position: absolute;
+    top: 140%; /* Mueve la lista justo debajo del botón */
+    right: 0; /* Alinea la lista a la derecha */
+    background-color: white;
+    width: 450px; /* Ajusta el ancho según lo que necesites */
+    z-index: 10; /* Asegura que la lista esté encima de otros elementos */
+    display: none; /* La lista está oculta inicialmente */
+    -webkit-box-shadow: 4px 4px 17px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 17px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 17px -1px rgba(0, 0, 0, 0.75);
+}
+
+.fav-list-container.show {
+    display: block; /* Muestra la lista cuando tenga la clase 'show' */
+}
+
+.item-lista-fav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding: 16px 20px;
+}
+
+
+.lista-fav-img{
+    width: 130px;
+}
+
+.lista-fav-img img{
+    width: 100%;
+}
+
+.lista-fav-name{
+    width: 300px;
+    font-size: 14px;
+}
+.lista-fav-price{
+    width: 80px;
+    font-size: 14px;
+}
+.lista-fav-close button{
+    background-color: transparent;
+    border: none;
+}
+.lista-fav-close button:hover{
+    background-color: transparent;
+    border: none;
+    fill: black;
+}
+
+.lista-fav-no-items{
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+/* Main */
+
+main {
+    background-color: #fafafa;
+    margin: auto;
+}
+
+/* Content */
+
+.width-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ***********
+*            *
+*    Home    *
+*            *
+*********** */
+
+.home-container {
+    display: flex;
+    flex-direction: column; /* Asegura que las filas estén una debajo de la otra */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.row-home-img {
+    margin-top: 20px;
+    display: flex; /* Hace que las imágenes se alineen en una fila */
+    width: 100%;
+    justify-content: space-between; /* Distribuye el espacio entre las imágenes */
+    gap: 20px;
+}
+
+.calzado-img,
+.outfit-img {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.tecno-img,
+.accesorios-img {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.img-hover-grow-right {
+    transition: transform 400ms; /* Añadido para animar el cambio de tamaño */
+    transform-origin: right; /* Asegura que la imagen se agrande desde el centro */
+}
+
+.img-hover-grow-right:hover {
+    transform: scale(1.03); /* Agranda la imagen al 110% */
+}
+
+.img-hover-grow-left {
+    transition: transform 400ms; /* Añadido para animar el cambio de tamaño */
+    transform-origin: left; /* Asegura que la imagen se agrande desde el centro */
+}
+
+.img-hover-grow-left:hover {
+    transform: scale(1.03); /* Agranda la imagen al 110% */
+}
+
+/* Carrito */
+
+
+/* Footer */
+
+.footer {
+    background-color: #131313;
+    color: rgb(46, 46, 46);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-nav a {
+    color: rgb(226, 226, 226);
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: rgb(226, 226, 226);
+    margin: 0 1rem;
+}
+
+.newsletter {
+    margin: 1rem 0;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.newsletter button {
+    padding: 0.5rem 1rem;
+}
+
+
+.envios-gratis {
+    background-color: #252525;
+    text-align: center;
+    height: 80px;
+    padding: 25px 0 10px 0;
+    margin-top: 14px;
+}
+
+.rotating-text {
+    font-size: 1.2rem;
+    color: #ffffff;
+    animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
