@@ -15,6 +15,12 @@ button {
     cursor: pointer;
 }
 
+.shadow{
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(148,148,148,1);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(148,148,148,1);
+    box-shadow: 3px 3px 8px 0px rgba(148,148,148,1);
+}
+
 /* Header */
 
 .header {
@@ -67,6 +73,10 @@ button {
     height: 3px; /* Altura de la línea */
     background-color: #e63a3a; /* Color de la línea */
     transition: width 0.3s ease; /* Duración y estilo de la transición */
+}
+
+.active{
+    color: #e63a3a !important;
 }
 
 .nav-header ul li a:hover {
@@ -241,46 +251,10 @@ main {
 /* Carrito */
 
 
-/* Footer */
-
-.footer {
-    background-color: #131313;
-    color: rgb(46, 46, 46);
-    padding: 2rem;
-    text-align: center;
-}
-
-.footer-nav a {
-    color: rgb(226, 226, 226);
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-.footer-nav a:hover {
-    text-decoration: underline;
-}
-
-.social-media a {
-    color: rgb(226, 226, 226);
-    margin: 0 1rem;
-}
-
-.newsletter {
-    margin: 1rem 0;
-}
-
-.newsletter input {
-    padding: 0.5rem;
-    margin-right: 0.5rem;
-}
-
-.newsletter button {
-    padding: 0.5rem 1rem;
-}
 
 
 .envios-gratis {
-    background-color: #252525;
+    background-color: #131313;
     text-align: center;
     height: 80px;
     padding: 25px 0 10px 0;

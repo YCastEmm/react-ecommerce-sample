@@ -3,6 +3,11 @@ import { createRoot } from "react-dom/client";
 import "./css/index.css";
 import "./css/catalogo.css";
 import "./css/cart.css";
+import "./css/footer.css";
+import "./css/contacto.css";
+import "./css/about_us.css";
+
+
 
 
 import router from "./router/index";

@@ -12,7 +12,7 @@ const CartProduct = ({product}) =>{
     };
 
     return (
-        <div className="product-cart" key={product.idCart}>
+        <div className="product-cart shadow" key={product.idCart}>
                 <div className="card-cart-img"><img src={product.urlImagen} alt="" /></div>
                 <div className="card-cart-name">{product.nombre}</div>
                 <div className="card-cart-size">{product.size}</div>

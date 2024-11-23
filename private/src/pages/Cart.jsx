@@ -3,6 +3,8 @@ import bannerlg from "../assets/banner-lg.webp";
 import CartProduct from "../components/CartProduct";
 import emptyCart from "../assets/empty_cart.webp";
 import { Link } from "react-router-dom";
+import CartTotal from "../components/CartTotal"
+import CuotasSinInteres from "../components/FreeShipping";
 
 
 const Cart = () => {
@@ -11,14 +13,23 @@ const Cart = () => {
     return (
         <div>
             <img className="banner" src={bannerlg} alt="Banner"></img>
+                <CuotasSinInteres></CuotasSinInteres>
             <div className="width-content cart-container">
+                
                 {cart.length > 0 ? (
                     <>
-                        <h1 className="cart-title">Tus artículos en el carrito</h1>
+                        <div className="cart-total-monto">
+                            <div>
+                                <h3 className="title-cart">Todo lo que necesitas para llegar más lejos</h3>
+                                <h3 className="subtitle-cart"> está en tu carrito</h3>
+                            </div>
+                        </div>
                         {cart.map((product) => (
                             <CartProduct key={product.id} product={product} />
                         ))}
+                        <CartTotal></CartTotal>    
                     </>
+                    
                 ) : (
                     <div className="empty-cart-container">
                         <div className="empty-cart-img"><img src={emptyCart} alt="" /></div>

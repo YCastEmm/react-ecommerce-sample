@@ -19,24 +19,24 @@ const Home = () => {
                     <div className="row-home-img">
                         <div>
                             <Link to="/catalogo">
-                                <img className="calzado-img img-hover-grow-left" src={calzadoImg} alt="" />
+                                <img className="calzado-img img-hover-grow-left shadow" src={calzadoImg} alt="" />
                             </Link>
                         </div>
                         <div>
                             <Link to="/catalogo">
-                                <img className="tecno-img img-hover-grow-right" src={tecnoImg} alt="" />
+                                <img className="tecno-img img-hover-grow-right shadow" src={tecnoImg} alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className="row-home-img">
                         <div>
                             <Link to="/catalogo">
-                                <img className="accesorios-img img-hover-grow-left" src={accesoriosImg} alt="" />
+                                <img className="accesorios-img img-hover-grow-left shadow" src={accesoriosImg} alt="" />
                             </Link>
                         </div>
                         <div>
                             <Link to="/catalogo">
-                                <img className="outfit-img img-hover-grow-right" src={outfitImg} alt="" />
+                                <img className="outfit-img img-hover-grow-right shadow" src={outfitImg} alt="" />
                             </Link>
                         </div>
                     </div>

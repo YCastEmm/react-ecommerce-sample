@@ -16,7 +16,7 @@ const CardProduct = ({ producto }) => {
     }
 
     return (
-        <div className="product-card">
+        <div className="product-card shadow">
 
             <FavButton producto={producto}></FavButton>            
             <div className="product-card-content">
@@ -55,7 +55,7 @@ const CardProduct = ({ producto }) => {
                 </div>
             </div>
             <div className="btn-div">
-                { !alertaTalle && <p className="alerta-talle">Debes seleccionar un talle para agregar el producto al carrito</p>}
+                { !alertaTalle && <p className="alerta-talle">Seleccioná un talle para agregar el producto al carrito</p>}
                 <button className="addToCart-btn" onClick={handleAddItemToCart}>
                     Agregar al carrito
                 </button>

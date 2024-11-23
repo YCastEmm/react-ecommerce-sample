@@ -1,0 +1,75 @@
+.titulo-seccion{
+    margin-top: 40px;
+}
+
+
+/* Estilos generales del formulario */
+.contact-form {
+    background-color: #fafafa;
+    padding: 40px 0 60px 0;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grupos del formulario */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-family: "Montserrat", serif; /* Fuente igual al resto */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder con misma fuente */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    font-family: "Montserrat", serif;
+    font-size: 16px;
+    color: #999; /* Color gris claro para diferenciar */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #252525;
+    box-shadow: 0 0 5px rgba(37, 37, 37, 0.3);
+}
+
+/* Altura más grande para el textarea */
+.form-group textarea {
+    height: 150px;
+    resize: none; /* Opcional: evitar el redimensionamiento */
+}
+
+/* Botón enviar */
+.send-btn {
+    display: inline-block;
+    padding: 15px 60px; /* Más grande */
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #252525;
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat", serif;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #585858;
+}
