@@ -18,24 +18,24 @@ const Home = () => {
                     
                     <div className="row-home-img">
                         <div>
-                            <Link to="/catalogo">
+                            <Link to="/catalogo?filter=zapatillas">
                                 <img className="calzado-img img-hover-grow-left shadow" src={calzadoImg} alt="" />
                             </Link>
                         </div>
                         <div>
-                            <Link to="/catalogo">
+                            <Link to="/catalogo?filter=tecnologia">
                                 <img className="tecno-img img-hover-grow-right shadow" src={tecnoImg} alt="" />
                             </Link>
                         </div>
                     </div>
                     <div className="row-home-img">
                         <div>
-                            <Link to="/catalogo">
+                            <Link to="/catalogo?filter=accesorios">
                                 <img className="accesorios-img img-hover-grow-left shadow" src={accesoriosImg} alt="" />
                             </Link>
                         </div>
                         <div>
-                            <Link to="/catalogo">
+                            <Link to="/catalogo?filter=indumentaria">
                                 <img className="outfit-img img-hover-grow-right shadow" src={outfitImg} alt="" />
                             </Link>
                         </div>
@@ -45,5 +45,6 @@ const Home = () => {
         </div>
     );
 };
+
 
 export default Home;

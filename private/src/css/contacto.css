@@ -31,6 +31,7 @@
     font-size: 16px;
     font-family: "Montserrat", serif; /* Fuente igual al resto */
     border: 1px solid #ccc;
+    border-radius: 0;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -39,7 +40,7 @@
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     font-family: "Montserrat", serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #999; /* Color gris claro para diferenciar */
 }
 
@@ -73,3 +74,34 @@
 .send-btn:hover {
     background-color: #585858;
 }
+
+
+
+
+.sent-container{
+    height: 670px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sent-image{
+    width: 200px;
+    margin-bottom: 80px;
+}
+
+.sent-title{
+    display: block;
+    display: block;
+    margin-bottom: 30px;
+    color: #303030;
+}
+
+.sent-subtitle{
+    display: block;
+    display: block;
+    color: #4e4e4e;
+    text-align: center;
+}
+

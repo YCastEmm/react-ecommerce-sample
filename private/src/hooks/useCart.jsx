@@ -19,11 +19,10 @@ const useCart = () =>{
 
         const newItem = { ...item, idCart: idCart, size: selectedSize };
 
-        // Al pasar una función como argumento, le doy acceso al valor anterior del estado (en este caso, el carrito) para que puedas actualizarlo en base a ese valor.
-        // Esto es útil para evitar problemas de sincronización y asegurar que siempre estés trabajando con el estado más actualizado.
+        // Al pasar una función como argumento, le doy acceso al valor anterior del estado (en este caso, el carrito) para que pueda actualizarlo en base a ese valor.
+        // Esto es útil para evitar problemas de sincronización y asegurar que siempre esté trabajando con el estado más actualizado.
         setCart((prevCart) => {
             const updatedCart = [...prevCart, newItem];
-            console.log(updatedCart);
             return updatedCart;
         });
     };

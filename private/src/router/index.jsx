@@ -7,6 +7,12 @@ import Cart from "../pages/Cart";
 import Catalog from "../pages/Catalog";
 import AboutUs from "../pages/About_us";
 import Contact from "../pages/Contact";
+import Checkout from "../pages/CheckOut";
+import Login from "../pages/Login";
+import Privacidad from "../pages/Privacy_Policy";
+import Terms from "../pages/Terms";
+
+
 
 
 
@@ -40,6 +46,22 @@ const router = createBrowserRouter([{
                     path: "/contacto", // Ruta para la página Acerca de
                     element: <Contact></Contact>, // Componente About para esta ruta
                 },
+                {
+                    path: "/checkout",
+                    element: <Checkout></Checkout>
+                },
+                {
+                    path: "/login",
+                    element: <Login></Login>
+                },
+                {
+                    path: "/privacidad",
+                    element: <Privacidad></Privacidad>
+                },
+                {
+                    path: "/terminos",
+                    element: <Terms></Terms>
+                }
             ]
         }
     ]

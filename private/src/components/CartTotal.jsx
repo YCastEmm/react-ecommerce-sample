@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const CartTotal = () =>{
     
     const {cart, setCart } = useCartContext()
-    console.log(cart)
     
     const costoTotal = () =>{
         let subTotal = 0;
@@ -27,7 +26,7 @@ const CartTotal = () =>{
                     <Link to="/catalogo"><button className="btn-cart-total continuar-comprando">Continuar comprando</button></Link>
                 </div>
                 <div>
-                    <button className="btn-cart-total checkout">Finalizar compra</button>
+                <Link to="/checkout"><button className="btn-cart-total checkout">Finalizar compra</button></Link>
                 </div>
             </div>
         </div>

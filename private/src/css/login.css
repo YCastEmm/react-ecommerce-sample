@@ -1,0 +1,63 @@
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-container{
+    margin-right: 80px;
+    margin-top: 80px;
+}
+
+.login-full-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-img{
+    height: 700px;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 400px;
+    font-family: "Montserrat", serif; /* Fuente igual al resto */
+    margin-bottom: 10px;
+}
+
+.login-title{
+    text-align: left;
+    margin-top: 100px;
+}
+
+.label-login{
+    margin-bottom: 5px;
+}   
+
+.input-login{
+    height: 30px;
+}
+
+.input-login::placeholder{
+    font-size: 14px;
+}
+
+.login-error{
+    color: #e63a3a;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.recu-pass{
+    margin: 20px 0 !important;
+    color: #548ee4;
+    text-decoration: underline;
+    font-size: 14px;
+}

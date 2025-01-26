@@ -1,16 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; // Usa useNavigate aquí
 import useFilter from "../hooks/useFilter";
 import CardProduct from "../components/CardProduct";
 import CuotasSinInteres from "../components/FreeShipping";
-import bannerlg from "../assets/runner.webp"
+import bannerlg from "../assets/runner.webp";
 
 const Catalog = () => {
-    const [selectedFilter, setSelectedFilter] = useState(""); // Estado para el filtro seleccionado
+    const location = useLocation();
+    const navigate = useNavigate(); // Usa useNavigate aquí
+
+    // Obtener el valor del filtro desde los parámetros de la URL (query string)
+    const queryFilter = new URLSearchParams(location.search).get("filter") || ""; 
+    const [selectedFilter, setSelectedFilter] = useState(queryFilter);
     const { handleFilter, productosFiltrados } = useFilter();
 
+    // Actualizar el filtro cuando cambie el estado o la URL
+    useEffect(() => {
+        handleFilter({ target: { value: selectedFilter } });
+    }, [selectedFilter, handleFilter]);
+
+    useEffect(() => {
+        // Sincronizar la URL con el filtro seleccionado
+        if (selectedFilter) {
+            navigate(`?filter=${selectedFilter}`); // Usamos navigate en vez de history.push
+        } else {
+            navigate("?"); // Quitar el filtro de la URL si no está seleccionado
+        }
+    }, [selectedFilter, navigate]);
+
     const handleSelectFilter = (value) => {
-        setSelectedFilter(value); // Establecer el filtro seleccionado
-        handleFilter({ target: { value } }); // Aplicar el filtro
+        setSelectedFilter(value); // Cambiar el filtro
     };
 
     return (
@@ -18,7 +37,7 @@ const Catalog = () => {
             <div>
                 <img className="banner" src={bannerlg} alt="Banner"></img>
             </div>
-            <CuotasSinInteres></CuotasSinInteres>
+            <CuotasSinInteres />
             <div className="width-content">
                 <div className="filter-container">
                     <div

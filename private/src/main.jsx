@@ -6,6 +6,11 @@ import "./css/cart.css";
 import "./css/footer.css";
 import "./css/contacto.css";
 import "./css/about_us.css";
+import "./css/checkout.css";
+import "./css/login.css";
+import "./css/header.css";
+
+
 
 
 

@@ -1,0 +1,263 @@
+
+/* Header */
+
+.header {
+    padding: 2rem 0;
+    background-color: #fafafa; /* Color de fondo */
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px; /* Ajusta según el tamaño de tu logo */
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between; /* Centra el navbar horizontalmente */
+    background-color: transparent; /* Color de fondo */
+    padding: 1rem 1rem 0 1rem;
+    gap: 120px;
+}
+
+.nav-header ul {
+    display: flex; /* Aplica flexbox a la lista */
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-header ul li a {
+    color: #000000; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 15px;
+    margin: 0 20px;
+    position: relative; /* Necesario para el efecto */
+}
+
+.nav-header ul li a::after {
+    content: ""; /* Crea un pseudo-elemento vacío */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Comienza con ancho 0 para la transición */
+    height: 3px; /* Altura de la línea */
+    background-color: #e63a3a; /* Color de la línea */
+    transition: width 0.3s ease; /* Duración y estilo de la transición */
+}
+
+.active{
+    color: #e63a3a !important;
+}
+
+.nav-header ul li a:hover {
+    color: #000000;
+}
+
+.nav-header ul li a:hover::after {
+    width: 100%; /* La línea se expande al 100% al hacer hover */
+    /* box-shadow: 1px 3px 5px 0px #1b1b1bb2;
+    -webkit-box-shadow: 1px 3px 5px 0px #1b1b1bb2;
+    -moz-box-shadow: 1px 3px 5px 0px #1b1b1bb2; */
+}
+
+.cart-btn {
+    position: relative;
+}
+
+.cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 10px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    padding: 1px 0 0 1px;
+    background-color: #e63a3a;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    z-index: 10; /* Asegura que la lista esté encima de otros elementos */
+}
+
+.banner {
+    width: 100%;
+}
+
+/* Favoritos */
+.fav-container {
+    position: relative;
+}
+
+.favBtn {
+    cursor: pointer;
+}
+
+.fav-list-container {
+    position: absolute;
+    top: 140%; /* Mueve la lista justo debajo del botón */
+    right: 0; /* Alinea la lista a la derecha */
+    background-color: white;
+    width: 450px; /* Ajusta el ancho según lo que necesites */
+    z-index: 10; /* Asegura que la lista esté encima de otros elementos */
+    display: none; /* La lista está oculta inicialmente */
+    -webkit-box-shadow: 4px 4px 17px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 17px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 17px -1px rgba(0, 0, 0, 0.75);
+}
+
+.fav-list-container.show {
+    display: block; /* Muestra la lista cuando tenga la clase 'show' */
+}
+
+.item-lista-fav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding: 16px 20px;
+}
+
+
+.lista-fav-img{
+    width: 130px;
+}
+
+.lista-fav-img img{
+    width: 100%;
+}
+
+.lista-fav-name{
+    width: 300px;
+    font-size: 14px;
+}
+.lista-fav-price{
+    width: 80px;
+    font-size: 14px;
+}
+.lista-fav-close button{
+    background-color: transparent;
+    border: none;
+}
+.lista-fav-close button:hover{
+    background-color: transparent;
+    border: none;
+    fill: black;
+}
+
+.lista-fav-no-items{
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 1281px) {
+    .header {
+        padding: 1.5rem 2rem ;
+        max-width: 100%;
+    }
+
+    .logo img {
+        height: 30px; /* Ajusta según el tamaño de tu logo */
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+    
+    .nav-header ul li a {
+        padding: 10px;
+        margin: 0 7px;
+    }
+}
+
+
+
+/* Menú hamburguesa */
+.hamburger-btn {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* Para pantallas medianas */
+@media (max-width: 992px) {
+    .hamburger-btn {
+        display: block;
+    }
+
+    .nav-header {
+        gap: 60px;
+    }
+
+    .nav-header ul {
+        margin: 10px 0 0 0;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 150px;
+        background-color: #fafafa;
+    }
+
+    .menu.open {
+        display: block;
+    }
+
+
+    .nav-links {
+        display: block !important;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+}
+
+
+
+/* Para pantallas medianas */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 1rem 1.5rem ;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 30px; /* Ajusta según el tamaño de tu logo */
+    }
+
+
+    .nav-header {
+        gap: 30px;
+    }
+
+    .nav-header ul {
+        margin: 20px 0 0 0;
+    }
+
+    .menu {
+        top: 100px;
+        padding-bottom: 20px;
+    }
+    .nav-links li {
+        padding: 15px 0;
+    }
+}

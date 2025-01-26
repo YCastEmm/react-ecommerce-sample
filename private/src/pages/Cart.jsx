@@ -8,7 +8,7 @@ import CuotasSinInteres from "../components/FreeShipping";
 
 
 const Cart = () => {
-    let { cart } = useCartContext();
+    const { cart } = useCartContext();
 
     return (
         <div>
@@ -25,7 +25,7 @@ const Cart = () => {
                             </div>
                         </div>
                         {cart.map((product) => (
-                            <CartProduct key={product.id} product={product} />
+                            <CartProduct key={product.idCart} product={product} />
                         ))}
                         <CartTotal></CartTotal>    
                     </>

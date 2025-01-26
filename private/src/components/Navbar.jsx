@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import { useCartContext } from "../context/CartContext"; 
 import Fav from "./Fav";
 import CartIcon from "../components/icons/CartIcon";
+import UserIcon from "../components/icons/UserIcon";
+
 
 const Navbar = () => {
     let { cart } = useCartContext();
-    console.table(cart);
 
     return (
         <nav className="nav-header">
@@ -40,6 +41,11 @@ const Navbar = () => {
                 </li>
                 <li>
                     <Fav></Fav>
+                </li>
+                <li>
+                    <NavLink to="/login" className={({ isActive }) => (isActive ? "active" : "")}>
+                        <UserIcon></UserIcon>
+                    </NavLink>
                 </li>
             </ul>
         </nav>
