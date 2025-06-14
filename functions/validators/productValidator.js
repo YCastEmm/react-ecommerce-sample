@@ -7,6 +7,7 @@ export const validatorCreateProduct = [
     check("categoria").exists().notEmpty(),
     check("descripcion").exists().notEmpty(),
     check("precio").exists().isNumeric().toFloat(),
+    check("precio").exists().isNumeric(),
     check("talles").optional().isArray(),
     (req, res, next) => validateResult(req, res, next)
 ];

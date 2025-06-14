@@ -4,6 +4,7 @@
         "categoria": "accesorios",
         "descripcion": "Medias con tecnología avanzada para reducir rozaduras y mejorar ventilación.",
         "precio": 4320,
+        "stock": 25,
         "urlImagen": "https://i.postimg.cc/NfcN7q9J/accesorios-01.webp",
         "talles": ["S", "M", "L"]
     },
@@ -12,6 +13,7 @@
         "categoria": "accesorios",
         "descripcion": "Visera cómoda para mantener el sudor lejos de los ojos.",
         "precio": 5400,
+        "stock": 4,
         "urlImagen": "https://i.postimg.cc/VvjKQ4TW/accesorios-03.webp"
     },
     {
@@ -19,6 +21,7 @@
         "categoria": "accesorios",
         "descripcion": "Riñonera con espacio para botellas y compartimento para objetos personales.",
         "precio": 10800,
+        "stock": 7,
         "urlImagen": "https://i.postimg.cc/kM81bX4R/accesorios-04.webp"
     },
     {
@@ -26,6 +29,7 @@
         "categoria": "zapatillas",
         "descripcion": "Zapatillas ligeras con máxima amortiguación, ideales para largas distancias en asfalto.",
         "precio": 86400,
+        "stock": 9,
         "talles": [37, 39, 40, 41, 42],
         "urlImagen": "https://i.postimg.cc/1tFHwJ91/calzado-05.webp"
     },
@@ -34,6 +38,7 @@
         "categoria": "zapatillas",
         "descripcion": "Diseño ultraligero para competiciones, optimizadas para velocidad en asfalto.",
         "precio": 129600,
+        "stock": 25,
         "talles": [37, 39, 40, 41, 42],
         "urlImagen": "https://i.postimg.cc/020VVW78/calzado-01.webp"
     },
@@ -42,6 +47,7 @@
         "categoria": "indumentaria",
         "descripcion": "Mallas de compresión que favorecen la circulación y el soporte muscular.",
         "precio": 19800,
+        "stock": 20,
         "talles": ["S", "M", "L", "XL"],
         "urlImagen": "https://i.postimg.cc/Dy6crWK0/indumentaria-04.webp"
     },
@@ -50,6 +56,7 @@
         "categoria": "indumentaria",
         "descripcion": "Short cómodo y ligero con tecnología antirozaduras.",
         "precio": 9000,
+        "stock": 15,
         "talles": ["S", "M", "L", "XL"],
         "urlImagen": "https://i.postimg.cc/jSj4ZssX/indumentaria-05.webp"
     },
@@ -58,6 +65,7 @@
         "categoria": "indumentaria",
         "descripcion": "Chaqueta corta-viento y repelente al agua para entrenamientos en exterior.",
         "precio": 25200,
+        "stock": 23,
         "talles": ["S", "M", "L", "XL"],
         "urlImagen": "https://i.postimg.cc/7YwVJ3dj/indumentaria-03.webp"
     },
@@ -66,6 +74,7 @@
         "categoria": "accesorios",
         "descripcion": "Gorra ligera con protección UV para días soleados.",
         "precio": 6480,
+        "stock": 6,
         "urlImagen": "https://i.postimg.cc/7hvKWjBL/accesorios-02.webp"
     },
     {
@@ -73,6 +82,7 @@
         "categoria": "accesorios",
         "descripcion": "Mochila ligera con sistema de hidratación para largas distancias.",
         "precio": 21600,
+        "stock": 9,
         "urlImagen": "https://i.postimg.cc/BnZMkTC2/accesorios-05.webp"
     },
     {
@@ -80,6 +90,7 @@
         "categoria": "tecnologia",
         "descripcion": "Reloj con GPS integrado y seguimiento de ritmo cardíaco para monitorear cada paso.",
         "precio": 79200,
+        "stock": 22,
         "urlImagen": "https://i.postimg.cc/4xFb0ryT/tecno-02.webp"
     },
     {
@@ -87,6 +98,7 @@
         "categoria": "tecnologia",
         "descripcion": "Auriculares con resistencia al agua y ajuste seguro para correr.",
         "precio": 28800,
+        "stock": 15,
         "urlImagen": "https://i.postimg.cc/FFjpKWWj/tecno-01.webp"
     },
     {
@@ -94,6 +106,7 @@
         "categoria": "tecnologia",
         "descripcion": "Banda de monitoreo de ritmo cardíaco de alta precisión.",
         "precio": 14400,
+        "stock": 26,
         "urlImagen": "https://i.postimg.cc/d0kmc4ZZ/tecno-03.webp"
     },
     {
@@ -101,6 +114,7 @@
         "categoria": "zapatillas",
         "descripcion": "Zapatillas con suela antideslizante y soporte extra para terrenos irregulares.",
         "precio": 108000,
+        "stock": 25,
         "talles": [37, 39, 40, 41, 42],
         "urlImagen": "https://i.postimg.cc/7LfXYqd6/calzado-03.webp"
     },
@@ -109,6 +123,7 @@
         "categoria": "zapatillas",
         "descripcion": "Zapatillas de diseño minimalista para una pisada más natural.",
         "precio": 72000,
+        "stock": 10,
         "talles": [37, 39, 40, 41, 42],
         "urlImagen": "https://i.postimg.cc/pd4CmgMB/calzado-04.webp"
     },
@@ -117,6 +132,7 @@
         "categoria": "zapatillas",
         "descripcion": "Confort superior para reducir el impacto en cada pisada en cualquier superficie.",
         "precio": 100800,
+        "stock": 13,
         "talles": [37, 39, 40, 41, 42],
         "urlImagen": "https://i.postimg.cc/7ZBmk5Bd/calzado-02.webp"
     },
@@ -125,6 +141,7 @@
         "categoria": "indumentaria",
         "descripcion": "Camiseta transpirable de secado rápido para días calurosos.",
         "precio": 12600,
+        "stock": 25,
         "talles": ["S", "M", "L", "XL"],
         "urlImagen": "https://i.postimg.cc/HnCt2Xxc/indumentaria-01.webp"
     },
@@ -133,6 +150,7 @@
         "categoria": "indumentaria",
         "descripcion": "Remera de compresión para mejorar el rendimiento y la recuperación.",
         "precio": 16200,
+        "stock": 7,
         "talles": ["S", "M", "L", "XL"],
         "urlImagen": "https://i.postimg.cc/Hn49PncS/indumentaria-02.webp"
     },
@@ -141,6 +159,7 @@
         "categoria": "tecnologia",
         "descripcion": "Podómetro ligero para medir pasos, distancia y calorías.",
         "precio": 5400,
+        "stock": 2,
         "urlImagen": "https://i.postimg.cc/NMR65F4g/tecno-05.webp"
     },
     {        
@@ -148,6 +167,7 @@
         "categoria": "tecnologia",
         "descripcion": "Cinturón ajustable con espacio para móvil y detalles reflectantes.",
         "precio": 9000,
+        "stock": 35,
         "urlImagen": "https://firebasestorage.googleapis.com/v0/b/ecommerce-muestra.firebasestorage.app/o/tecno_04.webp?alt=media&token=9bec6dbc-3222-4c10-b23a-6ac0c130ffed"
     }
 ]

@@ -1,4 +1,4 @@
-import { ProductModel } from "../models/Product.js";
+import { ProductModel } from "../models/product.js";
 import { matchedData } from "express-validator";
 import { handleResponse } from "../utils/handleResponse.js";
 import { handleError } from "../utils/handleError.js";
