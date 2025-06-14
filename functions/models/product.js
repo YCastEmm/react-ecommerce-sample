@@ -25,7 +25,7 @@ const ProductSchema = new mongoose.Schema(
         },
         talles: {
             type: [String],
-            required: true,
+            required: false,
         },
     },
     {

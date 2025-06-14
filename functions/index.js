@@ -3,23 +3,26 @@ import cors from "cors";
 import { config } from "dotenv";
 import { dbConnect } from "./config/db.js";
 import { router as productsRouter } from "./routes/products.js";
-import functions from "firebase-functions";
+import { router as authRouter } from "./routes/auth.js";
 
-config(); // Carga las variables de entorno desde .env
+config(); // Cargar variables de entorno
 
-const app = express(); 
+const app = express();
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 
 // Rutas
-app.use("/products", productsRouter);
-app.use("/auth", productsRouter);
+app.use("/api/products", productsRouter);
+app.use("/api/auth", authRouter);
+app.use("/uploads", express.static("uploads"));
 
-// Conexión a la bdd
+// Conectar a la base de datos
 dbConnect();
 
-
-// Exportar como función de Firebase
-export const api = functions.https.onRequest(app);
+// Iniciar servidor en puerto 3000
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en puerto ${PORT}`);
+});

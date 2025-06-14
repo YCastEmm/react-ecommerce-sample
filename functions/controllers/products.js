@@ -32,13 +32,22 @@ const getProductById = async (req, res) => {
 const createProduct = async (req, res) => {
     try {
         const body = matchedData(req);
+
+        if (req.file) {
+            const filename = req.file.filename;
+            const baseUrl = `${req.protocol}://${req.get("host")}`;
+            body.urlImagen = `${baseUrl}/uploads/${filename}`;
+        }
+
         const newProduct = await ProductModel.create(body);
         handleResponse(res, 201, "Producto creado correctamente", newProduct);
-
     } catch (error) {
+        console.error(error);
         handleError(res, "Error al crear el producto");
     }
 };
+
+
 
 // Actualizar un producto
 const updateProduct = async (req, res) => {

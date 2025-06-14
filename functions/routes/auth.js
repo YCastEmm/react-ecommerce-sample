@@ -1,11 +1,11 @@
 import express from "express";
-import { usersController } from "../controllers/auth.js";
+import { authController } from "../controllers/auth.js";
 
 export const router = express.Router();
 
-// Obtener todos los productos
-router.post("/login", usersController.loginUser);
+// Loguear un usuario
+router.post("/login", authController.loginUser);
 
 
-// Obtener todos los productos
-router.post("/register", usersController.registerUser);
+// Registrar un usuario
+router.post("/register", authController.registerUser);

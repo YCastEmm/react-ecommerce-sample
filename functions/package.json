@@ -5,7 +5,7 @@
         "lint": "eslint .",
         "serve": "firebase emulators:start --only functions",
         "shell": "firebase functions:shell",
-        "start": "npm run shell",
+        "start": "node index.js",
         "deploy": "firebase deploy --only functions",
         "logs": "firebase functions:log"
     },
@@ -22,6 +22,7 @@
         "jsonwebtoken": "^9.0.2",
         "mongodb": "^6.10.0",
         "mongoose": "^8.12.2",
+        "multer": "^2.0.1",
         "nodemon": "^3.1.7"
     },
     "devDependencies": {

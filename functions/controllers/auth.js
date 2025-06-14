@@ -1,35 +1,66 @@
-import {UserModel} from '../models/users.js'
+import { UserModel } from "../models/users.js";
 import { encryptPass, checkPass } from "../utils/handlePassword.js";
-import  {firmarToken}  from "../utils/handleJWT.js";
+import { firmarToken } from "../utils/handleJWT.js";
 import { handleError } from "../utils/handleError.js";
 import { handleResponse } from "../utils/handleResponse.js";
 
-
-const loginUser = async (req, res) =>{
+// Loguear un usuario
+const loginUser = async (req, res) => {
     try {
-        const user = UserModel.findOne({user: req.user}).select("user role password")
+        const { user, password } = req.body;
 
-        if(!user) {
-            handleError(res, "El usuario no existe", 404);    
+        const foundUser = await UserModel.findOne({ user }).select("user role password");
+
+        if (!foundUser) {
+            return handleError(res, "El usuario no existe", 404);
         }
 
-        const encryptedPass = user.password
-        const checkedPass = await checkPass(req.user.password, encryptedPass)
+        const isValidPassword = await checkPass(password, foundUser.password);
 
-        if (!checkedPass) {
-            handleError(res, "El password ingresado no es válido no existe", 401);    
+        if (!isValidPassword) {
+            return handleError(res, "El password ingresado no es válido", 401);
         }
 
-        user.password = undefined 
+        const { password: _, ...safeUser } = foundUser.toObject();
 
         const authPayload = {
-            token: signToken(user),
-            user
-        }
+            token: firmarToken(safeUser),
+            user: safeUser,
+        };
 
-        handleResponse(res, 200, "El usuario se logueó correctamente", authPayload)
-
+        handleResponse(res, 200, "El usuario se logueó correctamente", authPayload);
     } catch (error) {
         handleError(res, "Error al realizar el login");
     }
-}
+};
+
+// Registrar un usuario
+const registerUser = async (req, res) => {
+    try {
+        const { user, password, role } = req.body;
+
+        const hashedPassword = await encryptPass(password);
+
+        const createdUser = await UserModel.create({
+            user,
+            password: hashedPassword,
+            role,
+        });
+
+        const { password: _, ...plainUser } = createdUser.toObject();
+
+        const authPayload = {
+            token: firmarToken(plainUser),
+            user: plainUser,
+        };
+
+        handleResponse(res, 200, "Se registró un nuevo usuario", authPayload);
+    } catch (error) {
+        handleError(res, "Error al registrar al usuario");
+    }
+};
+
+export const authController = {
+    loginUser,
+    registerUser,
+};
