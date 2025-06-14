@@ -1,0 +1,153 @@
+[
+    {
+        "nombre": "Medias Técnicas Antirrozaduras",
+        "categoria": "accesorios",
+        "descripcion": "Medias con tecnología avanzada para reducir rozaduras y mejorar ventilación.",
+        "precio": 4320,
+        "urlImagen": "https://i.postimg.cc/NfcN7q9J/accesorios-01.webp",
+        "talles": ["S", "M", "L"]
+    },
+    {
+        "nombre": "Gel energéctico con cafeína",
+        "categoria": "accesorios",
+        "descripcion": "Visera cómoda para mantener el sudor lejos de los ojos.",
+        "precio": 5400,
+        "urlImagen": "https://i.postimg.cc/VvjKQ4TW/accesorios-03.webp"
+    },
+    {
+        "nombre": "Riñonera Portabotellas",
+        "categoria": "accesorios",
+        "descripcion": "Riñonera con espacio para botellas y compartimento para objetos personales.",
+        "precio": 10800,
+        "urlImagen": "https://i.postimg.cc/kM81bX4R/accesorios-04.webp"
+    },
+    {
+        "nombre": "Zapatillas Asfalto Ultra",
+        "categoria": "zapatillas",
+        "descripcion": "Zapatillas ligeras con máxima amortiguación, ideales para largas distancias en asfalto.",
+        "precio": 86400,
+        "talles": [37, 39, 40, 41, 42],
+        "urlImagen": "https://i.postimg.cc/1tFHwJ91/calzado-05.webp"
+    },
+    {
+        "nombre": "Zapatillas Competición Pro",
+        "categoria": "zapatillas",
+        "descripcion": "Diseño ultraligero para competiciones, optimizadas para velocidad en asfalto.",
+        "precio": 129600,
+        "talles": [37, 39, 40, 41, 42],
+        "urlImagen": "https://i.postimg.cc/020VVW78/calzado-01.webp"
+    },
+    {
+        "nombre": "Mallas Compresión Alta",
+        "categoria": "indumentaria",
+        "descripcion": "Mallas de compresión que favorecen la circulación y el soporte muscular.",
+        "precio": 19800,
+        "talles": ["S", "M", "L", "XL"],
+        "urlImagen": "https://i.postimg.cc/Dy6crWK0/indumentaria-04.webp"
+    },
+    {
+        "nombre": "Short Deportivo Ligero",
+        "categoria": "indumentaria",
+        "descripcion": "Short cómodo y ligero con tecnología antirozaduras.",
+        "precio": 9000,
+        "talles": ["S", "M", "L", "XL"],
+        "urlImagen": "https://i.postimg.cc/jSj4ZssX/indumentaria-05.webp"
+    },
+    {
+        "nombre": "Chaqueta Running Ligera",
+        "categoria": "indumentaria",
+        "descripcion": "Chaqueta corta-viento y repelente al agua para entrenamientos en exterior.",
+        "precio": 25200,
+        "talles": ["S", "M", "L", "XL"],
+        "urlImagen": "https://i.postimg.cc/7YwVJ3dj/indumentaria-03.webp"
+    },
+    {
+        "nombre": "Gorra Protección UV",
+        "categoria": "accesorios",
+        "descripcion": "Gorra ligera con protección UV para días soleados.",
+        "precio": 6480,
+        "urlImagen": "https://i.postimg.cc/7hvKWjBL/accesorios-02.webp"
+    },
+    {
+        "nombre": "Mochila Hidratación 2L",
+        "categoria": "accesorios",
+        "descripcion": "Mochila ligera con sistema de hidratación para largas distancias.",
+        "precio": 21600,
+        "urlImagen": "https://i.postimg.cc/BnZMkTC2/accesorios-05.webp"
+    },
+    {
+        "nombre": "Reloj GPS Avanzado",
+        "categoria": "tecnologia",
+        "descripcion": "Reloj con GPS integrado y seguimiento de ritmo cardíaco para monitorear cada paso.",
+        "precio": 79200,
+        "urlImagen": "https://i.postimg.cc/4xFb0ryT/tecno-02.webp"
+    },
+    {
+        "nombre": "Auriculares Bluetooth Resistencia Agua",
+        "categoria": "tecnologia",
+        "descripcion": "Auriculares con resistencia al agua y ajuste seguro para correr.",
+        "precio": 28800,
+        "urlImagen": "https://i.postimg.cc/FFjpKWWj/tecno-01.webp"
+    },
+    {
+        "nombre": "Banda Pulsómetro",
+        "categoria": "tecnologia",
+        "descripcion": "Banda de monitoreo de ritmo cardíaco de alta precisión.",
+        "precio": 14400,
+        "urlImagen": "https://i.postimg.cc/d0kmc4ZZ/tecno-03.webp"
+    },
+    {
+        "nombre": "Zapatillas Trail Runner",
+        "categoria": "zapatillas",
+        "descripcion": "Zapatillas con suela antideslizante y soporte extra para terrenos irregulares.",
+        "precio": 108000,
+        "talles": [37, 39, 40, 41, 42],
+        "urlImagen": "https://i.postimg.cc/7LfXYqd6/calzado-03.webp"
+    },
+    {
+        "nombre": "Zapatillas Minimalistas",
+        "categoria": "zapatillas",
+        "descripcion": "Zapatillas de diseño minimalista para una pisada más natural.",
+        "precio": 72000,
+        "talles": [37, 39, 40, 41, 42],
+        "urlImagen": "https://i.postimg.cc/pd4CmgMB/calzado-04.webp"
+    },
+    {
+        "nombre": "Zapatillas de Amortiguación Máxima",
+        "categoria": "zapatillas",
+        "descripcion": "Confort superior para reducir el impacto en cada pisada en cualquier superficie.",
+        "precio": 100800,
+        "talles": [37, 39, 40, 41, 42],
+        "urlImagen": "https://i.postimg.cc/7ZBmk5Bd/calzado-02.webp"
+    },
+    {
+        "nombre": "Camiseta Técnica Manga Corta",
+        "categoria": "indumentaria",
+        "descripcion": "Camiseta transpirable de secado rápido para días calurosos.",
+        "precio": 12600,
+        "talles": ["S", "M", "L", "XL"],
+        "urlImagen": "https://i.postimg.cc/HnCt2Xxc/indumentaria-01.webp"
+    },
+    {        
+        "nombre": "Remera Compresión Manga Larga",
+        "categoria": "indumentaria",
+        "descripcion": "Remera de compresión para mejorar el rendimiento y la recuperación.",
+        "precio": 16200,
+        "talles": ["S", "M", "L", "XL"],
+        "urlImagen": "https://i.postimg.cc/Hn49PncS/indumentaria-02.webp"
+    },
+    {        
+        "nombre": "Podómetro Compacto",
+        "categoria": "tecnologia",
+        "descripcion": "Podómetro ligero para medir pasos, distancia y calorías.",
+        "precio": 5400,
+        "urlImagen": "https://i.postimg.cc/NMR65F4g/tecno-05.webp"
+    },
+    {        
+        "nombre": "Cinturón Porta Móvil Reflectante",
+        "categoria": "tecnologia",
+        "descripcion": "Cinturón ajustable con espacio para móvil y detalles reflectantes.",
+        "precio": 9000,
+        "urlImagen": "https://firebasestorage.googleapis.com/v0/b/ecommerce-muestra.firebasestorage.app/o/tecno_04.webp?alt=media&token=9bec6dbc-3222-4c10-b23a-6ac0c130ffed"
+    }
+]

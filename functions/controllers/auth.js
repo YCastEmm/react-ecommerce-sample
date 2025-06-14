@@ -34,15 +34,15 @@ const loginUser = async (req, res) => {
     }
 };
 
-// Registrar un usuario
 const registerUser = async (req, res) => {
     try {
-        const { user, password, role } = req.body;
+        const { user, email, password, role } = req.body;
 
         const hashedPassword = await encryptPass(password);
 
         const createdUser = await UserModel.create({
             user,
+            email,
             password: hashedPassword,
             role,
         });
@@ -56,9 +56,11 @@ const registerUser = async (req, res) => {
 
         handleResponse(res, 200, "Se registró un nuevo usuario", authPayload);
     } catch (error) {
+        console.error(error); // opcional para ver errores detallados en consola
         handleError(res, "Error al registrar al usuario");
     }
 };
+
 
 export const authController = {
     loginUser,
