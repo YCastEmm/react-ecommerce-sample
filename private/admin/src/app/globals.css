@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+
+@theme {
+    --text-xs: 14px;
+    --font-sans: "Inter", sans-serif;
+}
+
+
+h1 {
+    @apply text-4xl;
+    @apply font-bold;
+}
+
+
+h2 {
+    @apply text-3xl;
+    @apply font-bold;
+}
+
+
+h3 {
+    @apply text-2xl;
+}
+
+.paginationButton {
+    @apply text-gray-800 px-3 text-sm rounded-lg hover:bg-gray-100 cursor-pointer disabled:hover:bg-white disabled:text-gray-400 disabled:cursor-default
+}
+
+.paginationButtonActive {
+    @apply text-white bg-gray-700 rounded-md text-sm px-3 py-1 cursor-default hover:bg-gray-700
+}
+
+.j-dropdown {
+    background: url(../../public/desplegable.png) right;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position-x: 94%;
+
+    -o-appearance: none; /* se oculta la flecha original del select con distintas propiedades compatibles con diferentes navegadores*/
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
