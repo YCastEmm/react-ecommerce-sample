@@ -1,6 +1,6 @@
 [{
-  "user": "admin",
-  "email": "admin@admin.com",
-  "password": "$2b$10$Jgb.XIshfOUd589zOp.QNeR9sZVT/WAa6CDfIffU54rnbwCZCt3r2",
-  "role": "admin"
+    "userName": "admin",
+    "email": "admin@test.com",
+    "password": "$2b$10$NP8K1AOiSMP1RFicp1ZxZuv4AxdcUphmveLGH9XbmnSVpBo6McpA.",
+    "role": "admin"
 }]

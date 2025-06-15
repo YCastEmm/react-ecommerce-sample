@@ -3,11 +3,11 @@ import jsonwebtoken from 'jsonwebtoken'
 const JWT_SECRET = process.env.JWT_SECRET
 
 // Firmar un token 
-export const firmarToken = (user) =>{
+export const firmarToken = (userName) =>{
     const tokenFirmado = jsonwebtoken.sign(
         {
-            _id: user._id,
-            role: user.role
+            _id: userName._id,
+            role: userName.role
         },
         JWT_SECRET,
         {

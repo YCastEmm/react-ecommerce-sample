@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { config } from "dotenv";
 import fs from "fs";
-import { ProductModel } from "./models/Product.js";
+import { ProductModel } from "./models/product.js";
 import { UserModel } from "./models/users.js";
 import { encryptPass } from "./utils/handlePassword.js";
 
@@ -13,6 +13,8 @@ const runSeeder = async () => {
     try {
         await mongoose.connect(uri);
         console.log("📦 Conectado a MongoDB");
+        console.log(uri);
+        
 
         // Cargar productos
         const rawProducts = fs.readFileSync("./data/products.json");

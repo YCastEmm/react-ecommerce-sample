@@ -7,9 +7,9 @@ import { handleResponse } from "../utils/handleResponse.js";
 // Loguear un usuario
 const loginUser = async (req, res) => {
     try {
-        const { user, password } = req.body;
+        const { userName, password } = req.body;
 
-        const foundUser = await UserModel.findOne({ user }).select("user role password");
+        const foundUser = await UserModel.findOne({ userName }).select("userName role password");
 
         if (!foundUser) {
             return handleError(res, "El usuario no existe", 404);
@@ -25,7 +25,7 @@ const loginUser = async (req, res) => {
 
         const authPayload = {
             token: firmarToken(safeUser),
-            user: safeUser,
+            userName: safeUser,
         };
 
         handleResponse(res, 200, "El usuario se logueó correctamente", authPayload);
@@ -36,12 +36,12 @@ const loginUser = async (req, res) => {
 
 const registerUser = async (req, res) => {
     try {
-        const { user, email, password, role } = req.body;
+        const { userName, email, password, role } = req.body;
 
         const hashedPassword = await encryptPass(password);
 
         const createdUser = await UserModel.create({
-            user,
+            userName,
             email,
             password: hashedPassword,
             role,
@@ -51,7 +51,7 @@ const registerUser = async (req, res) => {
 
         const authPayload = {
             token: firmarToken(plainUser),
-            user: plainUser,
+            userName: plainUser,
         };
 
         handleResponse(res, 200, "Se registró un nuevo usuario", authPayload);
