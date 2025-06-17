@@ -52,17 +52,28 @@ const createProduct = async (req, res) => {
 // Actualizar un producto
 const updateProduct = async (req, res) => {
     try {
-        const { id, ...data } = matchedData(req);
+        const { id, ...data } = matchedData(req); // matchedData toma solo los campos validados
+
+        // Si se cargó una imagen, se genera la URL
+        if (req.file) {
+            const url = `${req.protocol}://${req.get("host")}/uploads/${req.file.filename}`;
+            data.urlImagen = url;
+        }
+
         const updatedProduct = await ProductModel.findByIdAndUpdate(id, data, {
             new: true,
         });
-        if (!updatedProduct) return handleError(res, "Producto no encontrado", 404);
-        handleResponse(res, 200, "Producto actualizado correctamente", updatedProduct);
 
+        if (!updatedProduct) {
+            return handleError(res, "Producto no encontrado", 404);
+        }
+
+        handleResponse(res, 200, "Producto actualizado correctamente", updatedProduct);
     } catch (error) {
         handleError(res, "Error al actualizar el producto");
     }
 };
+
 
 // Eliminar un producto
 const deleteProduct = async (req, res) => {

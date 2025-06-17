@@ -12,13 +12,13 @@ export const router = express.Router();
 router.get("/", productsController.getAllProducts);
 
 // Obtener un producto por ID
-router.get("/:id", authMiddleware, checkRole("admin"), validatorGetProductById, productsController.getProductById);
+router.get("/:id", authMiddleware, checkRole(["admin"]), validatorGetProductById, productsController.getProductById);
 
 // Crear un producto con imagen
-router.post("/", authMiddleware, checkRole("admin"), upload.single("imagen"), validatorCreateProduct, productsController.createProduct);
+router.post("/", authMiddleware, checkRole(["admin"]), upload.single("imagen"), validatorCreateProduct, productsController.createProduct);
 
 // Actualizar un producto
-router.put("/:id",  authMiddleware, checkRole("admin"), validatorGetProductById, validatorCreateProduct, productsController.updateProduct);
+router.put("/:id",  authMiddleware, checkRole(["admin"]), upload.single("imagen"), validatorGetProductById, validatorCreateProduct, productsController.updateProduct);
 
 // Eliminar un producto
-router.delete("/:id",  authMiddleware, checkRole("admin"), validatorGetProductById, productsController.deleteProduct);
+router.delete("/:id",  authMiddleware, checkRole(["admin"]), validatorGetProductById, productsController.deleteProduct);

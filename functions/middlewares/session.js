@@ -17,12 +17,12 @@ export const authMiddleware = async (req, res, next) =>{
             return res.status(401).json({error: "Token inválido. No se encontró el _id en el verifiedToken"})
         }
 
-        const userName = await UserModel.findById(verifiedToken._id)
-        req.userName = userName // Le agrego el userName a la petición para usarlo luego
+        const user = await UserModel.findById(verifiedToken._id)
+        req.user = user // Le agrego el userName a la petición para usarlo luego
 
         next()
 
     } catch (error) {
-        handleError(error, res, "Error en el authMiddleware", 500)
+        handleError(res, "Error en el authMiddleware", 500)
     }
 }

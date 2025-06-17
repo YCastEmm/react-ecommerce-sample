@@ -27,13 +27,7 @@ const runSeeder = async () => {
         const rawUsers = fs.readFileSync("./data/users.json");
         const users = JSON.parse(rawUsers);
         await UserModel.deleteMany({});
-        const usersWithHashedPasswords = await Promise.all(
-            users.map(async (u) => ({
-                ...u,
-                password: await encryptPass(u.password),
-            }))
-        );
-        await UserModel.insertMany(usersWithHashedPasswords);
+        await UserModel.insertMany(users);
         console.log(`✅ Se cargaron ${users.length} usuarios`);
 
         process.exit();

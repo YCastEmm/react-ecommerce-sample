@@ -13,8 +13,8 @@ const loginUser = async (req, res) => {
 
         if (!foundUser) {
             return handleError(res, "El usuario no existe", 404);
-        }
-
+        }       
+        
         const isValidPassword = await checkPass(password, foundUser.password);
 
         if (!isValidPassword) {
@@ -25,7 +25,7 @@ const loginUser = async (req, res) => {
 
         const authPayload = {
             token: firmarToken(safeUser),
-            userName: safeUser,
+            user: safeUser,
         };
 
         handleResponse(res, 200, "El usuario se logueó correctamente", authPayload);

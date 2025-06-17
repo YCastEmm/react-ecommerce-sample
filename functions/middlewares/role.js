@@ -4,9 +4,8 @@ import { handleError } from "../utils/handleError.js"
 
 export const checkRole = (role) => (req, res, next) =>{
     try {
-        const { userName } = req
-        const rolesByUser = userName.role
-
+        const { user } = req
+        const rolesByUser = user.role
         const checkValidRole = role.some((singleRole) => rolesByUser.includes(singleRole))
 
         if (!checkValidRole) {
@@ -15,6 +14,6 @@ export const checkRole = (role) => (req, res, next) =>{
 
         next()
     } catch (error) {
-        handleError(error, res, "Error al realizar la verificación de roles", 500)
+        handleError(res, "Error al realizar la verificación de roles", 500)
     }
 }
